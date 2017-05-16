@@ -1,0 +1,15 @@
+<ion-view view-title="首页">
+  <ion-content>
+
+    <div class="list">
+      <div class="item item-button-right text-center" ng-click="selectAreaButtonClicked()">
+        <span>点击选择地区</span>
+        <button class="button button-calm button-clear icon ion-ios-arrow-up"></button>
+      </div>
+
+      <div ng-if="selectedArea" class="item item-text-wrap">
+        <span>选中地区：{{selectedArea.provinceName}}-{{selectedArea.cityName}}-{{selectedArea.areaName}}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

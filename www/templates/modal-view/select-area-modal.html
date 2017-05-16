@@ -1,0 +1,39 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <button class="button button-stable button-clear icon ion-ios-close-empty"
+            ng-click="closeImcSelectAreaModal()"></button>
+    <h2 class="title">选择地区</h2>
+  </ion-header-bar>
+  <ion-slide-box ng-style="icmAreaSlideHeight()" on-slide-changed="imcAreaSlideChanged($index)" show-pager="false">
+    <ion-slide ng-repeat="item in imcAreaTabItems">
+      <ion-content class="has-subheader">
+        <div class="list">
+          <div class="item" style="font-size: 14px" ng-if="imcSelectedAreaItemIndex == 0"
+               ng-repeat="province in imcAreaData.provs_data" ng-bind="province.text"
+               ng-click="imcProvinceItemSelected(province)"
+               ng-class="{'calm': province.value == item.value}">
+          </div>
+
+          <div class="item" style="font-size: 14px" ng-if="imcSelectedAreaItemIndex == 1"
+               ng-repeat="city in imcAreaData.citys_data[imcAreaTabItems[0].value]"
+               ng-bind="city.text" ng-click="imcCityItemSelected(city)"
+               ng-class="{'calm': city.value == item.value}">
+          </div>
+
+          <div class="item" style="font-size: 14px" ng-if="imcSelectedAreaItemIndex == 2"
+               ng-repeat="area in imcAreaData.dists_data[imcAreaTabItems[1].value]"
+               ng-bind="area.text" ng-click="imcAreaItemSelected(area)"
+               ng-class="{'calm': area.value == item.value}">
+          </div>
+        </div>
+      </ion-content>
+    </ion-slide>
+  </ion-slide-box>
+
+  <div class="bar bar-subheader bar-light row-no-padding">
+    <a ng-repeat="item in imcAreaTabItems" class="tab-item"
+       ng-class="{'tab-item-active tab-item-calm': imcSelectedAreaItemIndex == $index}"
+       ng-click="imcAreaTabSelected($index)" ng-bind="item.text"></a>
+  </div>
+</ion-modal-view>
+
