@@ -4,8 +4,6 @@ ionic1地区（省、市、区）选择器Demo
 
 ![地区选择Demo.gif](http://upload-images.jianshu.io/upload_images/4128422-82b708a0ed3c9a6a.gif?imageMogr2/auto-orient/strip)
 
-Demo已开源，项目地址：https://github.com/hhjjj1010/ionic1-area-picker-demo
-
 ***
 1. 关于地区数据
 地区数据是保存在本地的area.json文件里面，使用$http.get("js/area.json")获取数据到项目中。
