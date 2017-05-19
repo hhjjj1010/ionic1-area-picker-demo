@@ -63,6 +63,5 @@ ionic1地区（省、市、区）选择器Demo
 ***
 
 ### 关于$ionicModal的再封装
-1. 选择地区的界面是用一个modal层弹出来的，因为在实际项目中，可能很多地方都会用到，所以就把对modal层的初始化，show、hide以及remove封装到一个service中。
-2. 同时，这个service还包括选中省、市、区之后的操作。
-3. 因为modal层的缓存的原因，所以在modal层关闭的时候是调用的remove方法，每次弹出的modal层都是重新初始化出来的。
+1. 选择地区的界面是用一个modal层弹出来的，因为在实际项目中，可能很多地方都会用到，所以就把对modal层的初始化，show、hide以及remove封装到一个service中。同时，这个service还包括选中省、市、区之后的操作。
+2. 因为modal层的缓存的原因，所以在modal层关闭的时候是调用的remove方法，每次弹出的modal层都是重新初始化出来的。
